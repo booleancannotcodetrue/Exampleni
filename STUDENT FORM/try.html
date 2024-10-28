@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h2>Sample Form</h2>
+
+    <form id="myForm">
+        <label for="name">Name (required):</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="errorMessage" style="color: red;"></p>
+
+    <script>
+        // Get the form and error message elements
+        const form = document.getElementById('myForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Add an event listener for the form submit event
+        form.addEventListener('submit', function(event) {
+            // Get all required input fields
+            const requiredFields = form.querySelectorAll('input[required]');
+
+            let allFieldsFilled = true;
+
+            // Check if all required fields have values
+            requiredFields.forEach(function(field) {
+                if (!field.value.trim()) {
+                    allFieldsFilled = false;
+                }
+            });
+
+            // If any required field is empty, prevent form submission
+            if (!allFieldsFilled) {
+                event.preventDefault();  // Prevent form from submitting
+                errorMessage.textContent = 'Please fill in all required fields.';
+            } else {
+                errorMessage.textContent = '';  // Clear the error message
+            }
+        });
+    </script>
+
+</body>
+</html>

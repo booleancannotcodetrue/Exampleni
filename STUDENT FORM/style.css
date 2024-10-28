@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(pics/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(166, 183, 219, 0.678);
+    font-family: "Poppins", sans-serif;
+}
+#container1{
+    text-align: center;
+}
+#container1 h2{
+    margin: 20px;
+}
+#container1 p{
+    width: 100%;
+    font-size: 40px;
+    background-color: rgb(77, 103, 255);
+    color: white;
+}
+#container1 h3{
+    font-size: 40px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+#container1 .level{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#container1 label{
+    font-size: 30px;
+    cursor: pointer;
+}
+#container1 #course{
+    appearance: none;
+    padding: 0 10px;
+    width: 55%;
+    height: 40px;
+    margin: 20px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#container1 #semester, #year{
+    cursor: pointer;
+    appearance: none;
+    padding: 0 10px;
+    width: 55%;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container2 .container-left, .container-right{
+    height: 90%;
+    width: 100%;
+    padding: 0 20px;
+}
+.container-left{
+    border-right-style: solid;
+    border-right-color: black;
+}
+.student{
+    text-align: center;
+    width: 100%;
+    height: 40%;
+}
+.container-left .student h3{
+    background-color: rgb(77, 103, 255);
+    color: white;
+}
+.container-left .student p{
+    font-size: 15px;
+    background-color: white;
+    padding: 10px 0;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(77, 103, 255);
+}
+.container-left label, .container-right label{
+    width: 100%;
+    font-size: 20px;
+    padding: 0 10px;
+    color: white;
+    background-color: rgb(77, 103, 255);
+}
+.container-left #fname, #lname, #mname{
+    width: 95%;
+    height: 20px;
+    margin-bottom: 15px ;
+    padding: 0 10px;
+}
+.container-left #male, #female, #others{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.container-left #gen, #ind, #stat, #ent, #doc{
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+.container-left #yes, #no{
+    margin-top: 15px;
+    cursor: pointer;
+}
+.container-left #ethnicity, #dialect, .container-right #religion, #region, #province, #municipal{
+    appearance: none;
+    padding: 0 10px;
+    height: 30px;
+}
+.container-left #citizenship, #birthplace{
+    height: 23px;
+}
+.container-left #citizenship, #ethnicity, #dialect, .container-right #religion, #birthdate, #birthplace, #region, #province, #municipal, #municipal_address, #email, #contact, #exam{
+    width: 24%;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+}
+.container-right input, .container-right select{
+    margin-bottom: 10px;
+}
+.container-right #religion{
+    width: 76%;
+}
+.container-right #birthdate{
+    height: 25px;
+    padding: 0 10px;
+}
+.container-right #birthplace{
+    width: 66%;
+    padding: 0 10px;
+}
+.container-right #region, #province, #municipal{
+    width: 24.25%;
+}
+.container-right #municipal_address{
+    width: 90.5%;
+    padding: 0 10px;
+    height: 25px;
+    cursor: text;
+}
+.container-right #email, #contact{
+    width: 24%;
+    padding: 0 10px;
+    height: 25px;
+    margin-top: 1px;
+    cursor: text;
+}
+.container-right #exam{
+    padding: 0 10px;
+    height: 25px;
+}
+.container-right #image, #exam{
+    margin-bottom: 0;
+}
+#image{
+    display: none;
+}
+#img{
+    background-color: white;
+    color: rgb(77, 103, 255);
+    transition: 0.3s;
+}
+#img:hover{
+    background-color: rgb(221, 221, 221);
+}
+#container2 .back{
+    margin-left: 65%;
+}
+#container3{
+    text-align: center;
+    background-color: rgba(166, 219, 186, 0.678);
+}
+.educ, .guardian, .medic{
+    margin-top: 2%;
+    width: 100%;
+    height: 20%;
+}
+.educ label, .guardian label, .medic label{
+    font-size: 20px;
+    color: white;
+    padding: 0 10px;
+    background-color: rgb(0, 148, 32);
+}
+.educ input[type="text"], .guardian input[type="text"], .guardian input[type="tel"], .medic input{
+    width: 30%;
+    height: 20px;
+}
+.educ select, .guardian select, .medic select{
+    width: 10%;
+    height: 25px;
+}
+.educ select, .educ input[type="text"], .guardian input[type="text"], .guardian input[type="tel"], .guardian select, .medic input{
+    position: relative;
+    bottom: 3px;
+}
+.educ h3, .guardian h3, .medic h3{
+    color: white;
+    background-color: rgba(95, 161, 95, 0.74);
+}
+#container3 h2, #container4 h2, #container5 h2, #container6 h2{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(14, 153, 14);
+}
+#container4{
+    background-color: rgba(243, 224, 197, 0.678);
+    text-align: center;
+}
+#container4 h2{
+    background-color: rgb(182, 153, 22);
+}
+.guardian{
+    height: 35%;
+}
+#guard{
+    height: 25%;
+}
+.guardian h3{
+    background-color: rgba(209, 180, 49, 0.801);
+}
+.guardian input[type="text"]{
+    margin: 10px 0;
+}
+.guardian label{
+    background-color: rgb(168, 143, 31);
+}
+#container5{
+    background-color: rgba(255, 255, 255, 0.678);
+    text-align: center;
+}
+#container5 h2{
+    background-color: rgb(179, 30, 30);
+}
+#medic{
+    height: 50%;
+}
+#body{
+    height: 10%;
+}
+.medic input{
+    margin-top: 10px;
+}
+.medic h3{
+    background-color: rgba(179, 30, 30, 0.678);
+}
+.medic label{
+    background-color: rgb(207, 35, 35);
+}
+.medic input[type="number"], .medic input[type="date"]{
+    width: 10%;
+}
+#med, #food, #oth{
+    width: 15%;
+}
+#container6{
+    text-align: center;
+}
+#container6 h2{
+    margin-top: 5%;
+    background-color: rgb(77, 103, 255)
+}
+#container6 p{
+    font-size: 20px;
+    padding: 2% 10%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.836);
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    border-bottom-color: rgb(77, 103, 255);
+}
+
+#container2, #container3, #container4, #container5, #container6{
+    display: none;
+}
+.container button{
+    background-color: rgb(77, 103, 255);
+    border-style: none;
+    width: 15%;
+    height: 8%;
+    margin-top: 23px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+.container button:hover{
+    background-color: rgb(62, 88, 240);
+}
+#container3 button{
+    background-color: green;
+}
+#container3 button:hover{
+    background-color: rgb(13, 156, 13);
+}
+#container4 button{
+    background-color: rgb(182, 153, 22);
+}
+#container4 button:hover{
+    background-color: rgb(202, 171, 32);
+}
+#container5 button{
+    background-color: rgb(179, 30, 30);
+}
+#container5 button:hover{
+    background-color: rgb(212, 42, 42);
+}

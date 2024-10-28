@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="pics/rmmc-logo.png">
+    <title>RMMC - GenSan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<form id="enroll-form" action="insert.php" method="post">
+    <div class="wrapper">
+        <div class="container" id="container1">
+            <h2>Ramon Magsaysay Memorial Colleges</h2>
+            <p>Enrollment Form</p>
+            <h3>Select level and course</h3>
+            <label for="shs">Senior Highschool</label>
+            <input type="radio" id="shs" name="level" class="level" required>
+            <label for="c">College</label>
+            <input type="radio" id="c" name="level" class="level">
+            <label for="m">Masteral</label>
+            <input type="radio" id="m" name="level" class="level">
+            <label for="t">TVET</label>
+            <input type="radio" id="t" name="level" class="level">
+            <br>
+            <select name="course" id="course" required>
+                <option value="">Select Course</option>
+            </select>
+            <br>
+            <select name="semester" id="semester" required>
+                <option value="">Select Semester</option>
+                <option value="1">First Semester</option>
+                <option value="2">Second Semester</option>
+                <option value="summer" id="summer">Summer</option>
+            </select>
+            <br>
+            <select name="year" id="year" required>
+                <option value="">Select School Year</option>
+            </select>
+            <br>
+            <button type="button"><a href="index.php">Back</a></button>
+            <button onclick="showContainer2()" type="button">Next</button>
+        </div>
+        <div class="container" id="container2">
+            <div class="container-left">
+                <div class="student">
+                    <h3>Student Data Profile</h3>
+                    <p>Note: The "school" Ramon Magsaysay Memorial Colleges is committed to respect each student′s personal privacy in compliance with Data Privacy Act of 2012 while ensuring its ability to fully carry out its responsibilities.
+
+                    It is undestood that you agree to share your personal information by continuing to fill-up this form.</p>
+                </div>
+                <label for="lname">Surname </label>
+                <input type="text" name="lname" id="lname" placeholder="Last name" required>
+                <label for="fname">Given Name </label>
+                <input type="text" name="fname" id="fname" placeholder="First name" required>
+                <label for="mname">Middle Name </label>
+                <input type="text" name="mname" id="mname" placeholder="Middle name" required>
+                <label for="">Gender</label>
+                <input type="radio" name="gender" id="male" required>
+                <label for="male" id="gen">Male</label>
+                <input type="radio" name="gender" id="female" required>
+                <label for="female" id="gen">Female</label>
+                <input type="radio" name="gender" id="others" required>
+                <label for="others" id="gen">Others</label>
+                <label for="indigenous">Indigenous</label>
+                <input type="radio" name="indigenous" id="yes" required>
+                <label for="yes" id="ind">Yes</label>
+                <input type="radio" name="indigenous" id="no" required>
+                <label for="no" id="ind">No</label>
+                <label for="dialect">Dialect</label>
+                <select name="dialect" id="dialect" required>
+                    <option value="">Select</option>
+                    <option value="bisaya">Bisaya</option>
+                </select>
+                <br>
+                <label for="citizenship">Citizenship</label>
+                <input type="text" name="citizenship" id="citizenship" placeholder="Filipino, etc." required>
+                <label for="">Ethnicity</label>
+                <select name="ethnicity" id="ethnicity" required>
+                    <option value="">Select</option>
+                    <option value="tagalog">Tagalog</option>
+                    <option value="tboli">T'boli</option>
+                </select>
+            </div>
+            <div class="container-right">
+                    <label for="religion">Religion</label>
+                    <select name="religion" id="religion" required>
+                        <option value="">Select</option>
+                        <option value="catholic">Catholic</option>
+                        <option value="muslim">Muslim</option>
+                    </select>
+                    <br>
+                    <label for="status">Civil Status</label>
+                    <input type="radio"  name="status" id="single" required>
+                    <label for="single" id="stat">Single</label>
+                    <input type="radio"  name="status" id="married" required>
+                    <label for="married" id="stat">Married</label>
+                    <input type="radio"  name="status" id="widowed" required>
+                    <label for="widowed" id="stat">Widowed</label>
+                    <br>
+                    <label for="birthdate">Birthdate</label>
+                    <input type="date" name="birthdate" id="birthdate" required>
+                    <br>
+                    <label for="birthplace">Birthplace</label>
+                    <input type="text" name="birthplace" id="birthplace" placeholder="Address" required>
+                    <br>
+                    <label for="address">Address</label>
+                    <select name="region" id="region" required>
+                        <option value="">Select</option>
+                        <option value="ncr">NCR</option>
+                        <option value="12">Region 12</option>
+                    </select>
+                    <select name="province" id="province" required>
+                        <option value="">Select</option>
+                        <option value="socot">South Cotabato</option>
+                    </select>
+                    <select name="municipal" id="municipal" required>
+                        <option value="">Select</option>
+                        <option value="polomolok">Polomolok</option>
+                    </select>
+                    <br>
+                    <input type="text" id="municipal_address" name="municipal_address" placeholder="Barangay, street, block, house#" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="youremail@url.host" required>
+                    <label for="contact">Contact</label>
+                    <input type="tel" name="contact" id="contact" placeholder="09#########" required>
+                    <br>
+                    <label for="">Entry Type</label>
+                    <input type="radio" name="entry" id="new" required>
+                    <label for="new" id="ent">New</label>
+                    <input type="radio" name="entry" id="transferee">
+                    <label for="transferee" id="ent">Transferee</label>
+                    <input type="radio" name="entry" id="returnee">
+                    <label for="returnee" id="ent">Returnee</label>
+                    <br>
+                    <label for="">Document</label>
+                    <input type="checkbox" name="document" id="f137" required>
+                    <label for="f137" id="doc">F137</label>
+                    <input type="checkbox" name="document" id="bc">
+                    <label for="bc" id="doc">BC</label>
+                    <input type="checkbox" name="document" id="gmc">
+                    <label for="gmc" id="doc">GMC</label>
+                    <br>
+                    <input type="checkbox" name="document" id="mcontact">
+                    <label for="mcontract" id="doc">M-contract</label>
+                    <input type="checkbox" name="document" id="otr">
+                    <label for="otr" id="doc">OTR</label>
+                    <input type="checkbox" name="document" id="f138">
+                    <label for="f138" id="doc">F138/Card</label>
+                    <input type="checkbox" name="document" id="hd">
+                    <label for="hd" id="doc">HD</label>
+                    <br>
+                    <label for="exam">Exam Result</label>
+                    <input type="number" name="exam" id="exam" min="0" max="60" required>
+                    <br>
+                    <label for="image">Upload Account Image</label>
+                    <br>
+                    <input type="file" name="image" id="image" accept="image/*">
+                    <label for="image" id="img">Choose Image</label>
+                    <br>
+                <button onclick="showContainer1()" class="back" type="button">Back</button>
+                <button onclick="showContainer3()" type="button">Next</button>
+            </div>
+        </div>
+        <div class="container" id="container3">
+            <h2>Educational Background</h2>
+            <div class="educ">
+                <h3>Elementary School Level</h3>
+                <label for="elem-school">Elementary Completed</label>
+                <input type="text" name="elem-school" id="elem-school" placeholder="School graduated" required>
+                <label for="elemyear">School Year</label>
+                <select name="elemyear" id="elemyear" required>
+                    <option value="">Select</option>
+                </select>
+                <br>
+                <label for="">School Address</label>
+                <select name="elem_region" id="elem-region" required>
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="elem_province" id="elem-province" required>
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="elem_municipal" id="elem-municipal" required>
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="elem_municipal_address" name="elem_municipal_address" placeholder="Barangay,street, block, house#" required>
+            </div>
+            <div class="educ">
+                <h3>Junior Highschool Level</h3>
+                <label for="jun-school">Junior Highschool Completed</label>
+                <input type="text" name="jun-school" id="jun-school" placeholder="School graduated" required>
+                <label for="jun-year">School Year</label>
+                <select name="jun-year" id="jun-year" required>
+                    <option value="">Select</option>
+                </select>
+                <br>
+                <label for="jun-address">School Address</label>
+                <select name="jun-region" id="jun-region" required>
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="jun-province" id="jun-province" required>
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="jun-municipal" id="jun-municipal" required>
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="jun_municipal_address" name="jun_municipal_address" placeholder="Barangay,street, block, house#" required>
+            </div>
+            <div class="educ">
+                <h3>Senior Highschool Level</h3>
+                <label for="sen-school">Senior Highschool Completed</label>
+                <input type="text" name="sen-school" id="sen-school" placeholder="School graduated" required>
+                <label for="strand">Academic Strand</label>
+                <select name="strand" id="strand" required>
+                    <option value="">Select</option>
+                    <option value="abm">ABM</option>
+                    <option value="ad">AD</option>
+                    <option value="gas">GAS</option>
+                    <option value="humss">HUMSS</option>
+                    <option value="stem">STEM</option>
+                    <option value="sports">SPORTS</option>
+                    <option value="tvl">TVL</option>
+                </select>
+                <br>
+                <label for="lrn">LRN</label>
+                <input type="text" name="lrn" id="lrn" placeholder="Enter LRN" required>
+                <label for="sen-year">School Year</label>
+                <select name="sen-year" id="sen-year" required>
+                    <option value="">Select</option>
+                </select>
+                <br>
+                <label for="sen-address">School Address</label>
+                <select name="sen-region" id="sen-region" required>
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="sen-province" id="sen-province" required>
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="sen-municipal" id="sen-municipal" required>
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="sen_municipal_address" name="sen_municipal_address" placeholder="Barangay,street, block, house#" required>
+            </div>
+            <button onclick="showContainer2()" class="ed" type="button">Back</button>
+            <button onclick="showContainer4()" class="ed" type="button">Next</button>
+        </div>
+        <div class="container" id="container4">
+            <h2>Parent and or Guardian Data</h2>
+            <div class="guardian">
+                <h3>Parents</h3>
+                <label for="fathername">Father's Name</label>
+                <input type="text" name="fathername" id="fathername" placeholder="Full Name" required>
+                <label for="fcontact">Contact</label>
+                <input type="tel" name="fcontact" id="fcontact" placeholder="09#########">
+                <br>
+                <label for="">Address</label>
+                <select name="f_region" id="f-region">
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="f_province" id="f-province">
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="f_municipal" id="f-municipal">
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="f_municipal_address" name="f_municipal_address" placeholder="Barangay,street, block, house#">
+                <br>
+                <label for="mothername">Mother's Name</label>
+                <input type="text" name="mothername" id="mothername" placeholder="Full Name" required>
+                <label for="mcontact">Contact</label>
+                <input type="tel" name="mcontact" id="mcontact" placeholder="09#########">
+                <br>
+                <label for="">Address</label>
+                <select name="m-region" id="m-region">
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="m_province" id="m-province">
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="m_municipal" id="m-municipal">
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="m_municipal_address" name="m_municipal_address" placeholder="Barangay,street, block, house#">
+            </div>
+            <div class="guardian" id="guard">
+                <h3>Guardian</h3>
+                <label for="guardianname">Guardian's Name</label>
+                <input type="text" name="guardianname" id="guardianname" placeholder="Full Name" required>
+                <label for="gcontact">Contact</label>
+                <input type="tel" name="gcontact" id="gcontact" placeholder="09#########">
+                <br>
+                <label for="">Address</label>
+                <select name="g_region" id="g-region">
+                    <option value="">Select</option>
+                    <option value="ncr">NCR</option>
+                    <option value="12">Region 12</option>
+                </select>
+                <select name="g_province" id="g-province">
+                    <option value="">Select</option>
+                    <option value="socot">South Cotabato</option>
+                </select>
+                <select name="g_municipal" id="g-municipal">
+                    <option value="">Select</option>
+                    <option value="polomolok">Polomolok</option>
+                </select>
+                <input type="text" id="g_municipal_address" name="g_municipal_address" placeholder="Barangay,street, block, house#">
+            </div>
+            <button onclick="showContainer3()" class="gua" type="button">Back</button>
+            <button onclick="showContainer5()" class="gua" type="button">Next</button>
+        </div>
+        <div class="container" id="container5">
+            <h2>Student Medical Record</h2>
+            <div class="medic" id="body">
+                <h3>Body Mass Index</h3>
+                <label for="age">Age</label>
+                <input type="number" name="m-age" id="m-age" min="16" max="100" value="16" required>
+                <label for="weight">Weight</label>
+                <input type="number" name="weight" id="weight" min="0" max="200" placeholder="kilogram" required>
+                <label for="height">Height</label>
+                <input type="number" name="weight" id="weight" min="0" max="200" placeholder="centimeter" required>
+                <label for="blood">Blood type</label>
+                <select name="blood" id="blood" required>
+                    <option value="">Select</option>
+                    <option value="a+">A+</option>
+                </select>
+            </div>
+            <div class="medic" id="medic">
+                <h3>Medical History</h3>
+                <label for="inborn">Congenital(Inborn) DISEASES/DISABLITIES (if any)</label>
+                <input type="text" name="inborn" id="inborn">
+                <br>
+                <label for="diagnose">Date Diagnosed</label>
+                <input type="date" name="diagnose" id="diagnose">
+                <br>
+                <label for="">PREVIOUS HOSPITALIZATION DUE TO ILLNESS/SURGICAL OPERATION(if any)</label>
+                <br>
+                <label for="prev1">1</label>
+                <input type="text" name="prev1" id="prev1" placeholder="Hospital Place">
+                <label for="prev1-date">Date</label>
+                <input type="date" name="prev1-date" id="prev1-date">
+                <br>
+                <label for="prev2">2</label>
+                <input type="text" name="prev2" id="prev2" placeholder="Hospital Place">
+                <label for="prev1-date">Date</label>
+                <input type="date" name="prev2-date" id="prev2-date">
+                <br>
+                <label for="">ALLERGIES(if any)</label>
+                <label for="med">Medicine</label>
+                <input type="text" name="med" id="med">
+                <label for="food">Food</label>
+                <input type="text" name="food" id="food">
+                <label for="oth">Others</label>
+                <input type="text" name="oth" id="oth">
+            </div>
+            <button onclick="showContainer4()" class="ed" type="button">Back</button>
+            <button onclick="showContainer6()" class="ed" type="button">Next</button>
+        </div>
+        <div class="container" id="container6">
+            <h2>Data Privacy Agreement</h2>
+            <p>	
+            I hereby allow the school "Ramon Magsaysay Memorial Colleges Inc." to collect, use and process my personal data for legitimate educational or institutional interest as determined and enumerated in the Privacy Statement and other like circumstances, and allow its authorized personnel to process the information.
+            <br>
+            <br>
+            I am confirming that data entered with this admission is true and correct; and I understand that Ramon Magsaysay Memorial Colleges reserves the right to revise any decision made on the basis of the information I provide should be found to be untrue or incorrect.
+            <br>
+            <br>
+            <input type="checkbox" name="check" id="check" required>
+            <label for="check">Yes, I agree</label>
+            </p>
+            <button onclick="showContainer5()" class="ed" type="button">Back</button>
+            <button class="ed" type="submit">Submit</button>
+        </div>
+        <script src="form.js"></script>
+        <script src="container.js"></script>
+    </div>
+    </form>
+</body>
+</html>
